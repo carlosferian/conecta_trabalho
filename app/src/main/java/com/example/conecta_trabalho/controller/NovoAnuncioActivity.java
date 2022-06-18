@@ -30,7 +30,7 @@ public class NovoAnuncioActivity extends AppCompatActivity {
         String ramo = editTextAnuncianteRamo.getText().toString();
         String descricao = editTextAnuncioDescricao.getText().toString();
 
-        DataModel.getInstance().anuncios.add(
+        DataModel.getInstance().addAnuncio(
                 new Anuncio(anunciante, telefone, ramo, descricao)
         );
         finish();
@@ -42,7 +42,7 @@ public class NovoAnuncioActivity extends AppCompatActivity {
         String ramo = editTextAnuncianteRamo.getText().toString();
         String descricao = editTextAnuncioDescricao.getText().toString();
 
-        DataModel.getInstance().anuncios.add(
+        DataModel.getInstance().addAnuncio(
                 new Anuncio(anunciante, telefone, ramo, descricao)
         );
         finish();

@@ -76,7 +76,7 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull AnuncioAdapter.ViewHolder holder, int position) {
-        Anuncio a = DataModel.getInstance().anuncios.get(position);
+        Anuncio a = DataModel.getInstance().getAnuncio(position);
         holder.textAnuncianteNome.setText(a.getAnunciante());
         holder.textAnuncianteTelefone.setText(a.getTelefone());
         holder.textAnuncianteRamo.setText(a.getRamo());
@@ -86,7 +86,7 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return DataModel.getInstance().anuncios.size();
+        return DataModel.getInstance().getAnunciosSize();
     }
 }
 
