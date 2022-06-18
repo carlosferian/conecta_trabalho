@@ -50,6 +50,19 @@ public class AnuncioDatabase extends SQLiteOpenHelper {
         database.close();
         return id;
     }
+
+    public long insertAnuncioInDB(Anuncio a){
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_ID, a.getId());
+        values.put(COL_ANUNCIANTE, a.getAnunciante());
+        values.put(COL_TELEFONE, a.getTelefone());
+        values.put(COL_RAMO, a.getTelefone());
+        values.put(COL_DESCRICAO, a.getDescricao());
+        long id = database.insert(DB_TABLE, null, values);
+        database.close();
+        return id;
+    }
     public ArrayList<Anuncio> getAnunciosFromDB(){
         ArrayList<Anuncio> anuncios = new ArrayList<>();
         SQLiteDatabase database = getReadableDatabase();
@@ -81,10 +94,11 @@ public class AnuncioDatabase extends SQLiteOpenHelper {
         values.put(COL_DESCRICAO, anuncio.getDescricao());
         String id = String.valueOf(anuncio.getId());
         int count = database.update(DB_TABLE, values, COL_ID + "=?", new String[]{id});
+        database.close();
         return count;
     }
 
-    public long removeAnuncioInDB(Anuncio anuncio){
+    public int removeAnuncioInDB(Anuncio anuncio){
         SQLiteDatabase database = getWritableDatabase();
         String id = String.valueOf(anuncio.getId());
         int count = database.delete(DB_TABLE,

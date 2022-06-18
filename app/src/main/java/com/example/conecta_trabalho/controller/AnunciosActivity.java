@@ -26,6 +26,11 @@ public class AnunciosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anuncios);
         recyclerView = findViewById(R.id.recyclerviewAnuncios);
+
+        DataModel.getInstance().createDatabase(getApplicationContext());
+
+
+
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(AnunciosActivity.this)
@@ -38,13 +43,14 @@ public class AnunciosActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new AnuncioAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                //goToDetailActivity(position);
             }
         });
         adapter.setOnItemLongClickListener(new AnuncioAdapter.OnItemLongClickListener(){
             @Override
             public boolean onItemLongClick(View view, int position){
-                Anuncio a = DataModel.getInstance().anuncios.remove(position);
+
+                Anuncio a = DataModel.getInstance().getAnuncio(position);
+                DataModel.getInstance().removeAnuncio(position);
                 adapter.notifyItemRemoved(position);
 
                 View contextView = findViewById(android.R.id.content);
@@ -52,7 +58,7 @@ public class AnunciosActivity extends AppCompatActivity {
                         .setAction(R.string.undo, new View.OnClickListener(){
                             @Override
                             public void onClick(View view){
-                                DataModel.getInstance().anuncios.add(position, a);
+                                DataModel.getInstance().insertAnuncio(a, position);
                                 adapter.notifyItemInserted(position);
                             }
                         })
