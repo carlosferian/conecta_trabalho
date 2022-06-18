@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/novo_an_ncio"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <EditText
+            android:id="@+id/editTextAnuncianteNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/anuncianteNome"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/editTextAnuncianteRamo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ramo"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editTextAnuncianteTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="(00)00000-0000"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <EditText
+            android:id="@+id/editTextAnuncioDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/descri_o_do_servi_o"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <Button
+            android:id="@+id/buttonAdicionarAnuncio"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="100dp"
+            android:onClick="adicionarNovoAnuncioOnClicked"
+            android:text="@string/adicionar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

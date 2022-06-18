@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/activity_anuncio.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/activity_anuncios.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/activity_incluir_anuncio.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/activity_main.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/activity_novo_anuncio.xml" value="0.4" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/content_novo_anuncio.xml" value="0.1546875" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/fragment_first.xml" value="0.1546875" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/fragment_second.xml" value="0.1546875" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/layout/recyclerview_anuncio.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/quase/StudioProjects/conecta_trabalho/app/src/main/res/menu/activity_menu.xml" value="0.3307291666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
