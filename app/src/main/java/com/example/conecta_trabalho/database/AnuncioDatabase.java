@@ -44,7 +44,7 @@ public class AnuncioDatabase extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COL_ANUNCIANTE, a.getAnunciante());
         values.put(COL_TELEFONE, a.getTelefone());
-        values.put(COL_RAMO, a.getTelefone());
+        values.put(COL_RAMO, a.getRamo());
         values.put(COL_DESCRICAO, a.getDescricao());
         long id = database.insert(DB_TABLE, null, values);
         database.close();
