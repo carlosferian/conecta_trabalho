@@ -15,7 +15,7 @@ public class DataModel {
     public static DataModel getInstance(){
         return instance;
     }
-    public Usuario usuario = new Usuario("mark", "1234");
+    public Usuario usuario = new Usuario("teste", "1234");
     private ArrayList<Anuncio> anuncios;
     private AnuncioDatabase database;
 
