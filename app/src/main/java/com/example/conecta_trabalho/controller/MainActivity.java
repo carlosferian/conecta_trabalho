@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        DataModel.getInstance().createDatabase(getApplicationContext());
     }
     public void loginButtonOnClick(View v){
         EditText usernameEditText = findViewById(R.id.editTextUser);
@@ -25,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
         String username = usernameEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
-        if(username.equals(DataModel.getInstance().usuario.getUsername()) && password.equals(DataModel.getInstance().usuario.getPassword())) {
+        if(DataModel.getInstance().loginUsuario(username, password)) {
             // Toast.makeText(MainActivity.this, getString(R.string.user_logged),
             //        Toast.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this, AnunciosActivity.class);
             startActivity(intent);
+            System.out.print((DataModel.getInstance().loginUsuario(username, password)));
 
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -44,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
             });
             builder.create().show();
         }
+    }
+    public void cadastrarOnClick(View view){
+
+        Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+        startActivity(intent);
     }
 
 }
