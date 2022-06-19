@@ -59,7 +59,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="150dp" />
+            android:layout_height="63dp" />
 
         <Button
             android:id="@+id/buttonLogin"
@@ -67,6 +67,24 @@
             android:layout_height="wrap_content"
             android:onClick="loginButtonOnClick"
             android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Não é cadastrado?"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/cadastraBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:onClick="cadastrarOnClick"
+            android:text="Cadastrar"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

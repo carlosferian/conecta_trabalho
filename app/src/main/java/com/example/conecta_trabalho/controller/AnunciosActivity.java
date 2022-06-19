@@ -30,7 +30,6 @@ public class AnunciosActivity extends AppCompatActivity {
         DataModel.getInstance().createDatabase(getApplicationContext());
 
 
-
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(AnunciosActivity.this)
